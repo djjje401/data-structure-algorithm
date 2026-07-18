@@ -12,7 +12,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
     for (int i = 0;i < progresses.size();i++)
     {
         int remaining = 100 - progresses[i];
-        if ((100 - progresses[i]) / speeds[i] == 0)
+        if ((100 - progresses[i]) % speeds[i] == 0)
         {
             day.push_back( remaining / speeds[i]);
         }
